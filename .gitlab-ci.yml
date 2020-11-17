@@ -1,0 +1,19 @@
+cache:
+  paths:
+    - node_modules/
+
+pages:
+  image: node:latest
+  stage: build
+  only:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /\[build\]/
+      - $CI_COMMIT_REF_NAME == "master"
+  script:
+    - npm install
+    - mkdir -p dist public
+    - npm run production
+    - mv dist/* public/
+  artifacts:
+    paths:
+      - public
