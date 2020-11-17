@@ -11,9 +11,9 @@ pages:
       - $CI_COMMIT_REF_NAME == "master"
   script:
     - npm install
-    - mkdir -p dist public
+    - mkdir -p build public
     - npm run production
-    - mv dist/* public/
+    - mv build/* public/
   artifacts:
     paths:
       - public
