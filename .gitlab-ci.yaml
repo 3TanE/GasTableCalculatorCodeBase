@@ -1,0 +1,15 @@
+image: node:latest
+
+cache:
+  paths:
+    - node_modules/
+
+run_test:
+  script:
+    - npm install
+    - npm run production
+    - ls -lah dist/
+  only:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /\[build\]/
+      - $CI_COMMIT_REF_NAME == "master"
