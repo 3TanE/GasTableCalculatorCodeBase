@@ -5,6 +5,7 @@ const TerserPlugin = require('terser-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
+const CopyPlugin = require("copy-webpack-plugin");
 
 const {bundleVendors, splitVendors, bundleStyles, htmlPages, entryPoints} = require('../config')
 
@@ -90,13 +91,20 @@ let base = {
 
 base.plugins = [
     ...htmlPlugins,
-
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
     new webpack.DefinePlugin({
         __DEVELOPMENT__: base.mode === 'development',
         __STAGING__: base.mode === 'staging',
         __PRODUCTION__: base.mode === 'production',
+    }),
+    new CopyPlugin({
+        patterns: [
+            {from: "./src/manifest.json", to: "manifest.json"},
+            {from: "./src/favicon.ico", to: "favicon.ico"},
+            {from: "./src/icons", to: "icons"},
+            {from: "./src/serviceworker.js", to: "serviceworker.js"},
+        ],
     }),
 ];
 
