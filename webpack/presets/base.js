@@ -25,7 +25,7 @@ let base = {
         publicPath: '/',
         filename: '[name].js',
         path: path.resolve('./build'),
-        chunkFilename: 'chunks/[name].js',
+        chunkFilename: '[name].js',
     },
 
     optimization: {
