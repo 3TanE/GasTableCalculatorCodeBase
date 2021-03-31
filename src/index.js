@@ -5,7 +5,7 @@ import {Provider, useSelector} from "react-redux";
 import {useCookies} from "react-cookie";
 import {CssBaseline} from '@material-ui/core'
 import {ThemeProvider} from '@material-ui/core/styles'
-
+import 'fontsource-roboto';
 import {darkTheme, lightTheme} from "./theme";
 
 import Loading from "./App/Loading";
