@@ -66,7 +66,7 @@ const entryPoints = {
 // HTML files to generate from given entries
 const htmlPages = [
     {
-        template: path.resolve('./src/index.html'),
+        template: path.resolve('./src/public/index.html'),
         chunks: ['main.entry'],
         filename: 'index.html'
     }

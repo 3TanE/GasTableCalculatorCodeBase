@@ -1,7 +1,11 @@
-var CACHE_NAME = 'main-cache';
-var urlsToCache = [
+const CACHE_NAME = 'main-cache';
+const urlsToCache = [
     '/',
 ];
+
+
+const serveStale = false; // fetch ALL requests in background and serve stale content
+
 
 self.addEventListener('install', function (event) {
     // Perform install steps
@@ -48,5 +52,6 @@ self.addEventListener('fetch', function (event) {
             })
     );
 });
+
 
 

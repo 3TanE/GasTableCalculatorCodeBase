@@ -25,7 +25,7 @@ let base = {
         publicPath: '/',
         filename: '[name].js',
         path: path.resolve('./build'),
-        chunkFilename: 'chunks/[name].js',
+        chunkFilename: '[name].js',
     },
 
     optimization: {
@@ -100,9 +100,9 @@ base.plugins = [
     }),
     new CopyPlugin({
         patterns: [
-            {from: "./src/manifest.json", to: "manifest.json"},
-            {from: "./src/favicon.ico", to: "favicon.ico"},
-            {from: "./src/icons", to: "icons"},
+            {from: "./src/public/manifest.json", to: "manifest.json"},
+            {from: "./src/public/favicon.ico", to: "favicon.ico"},
+            {from: "./src/public/icons", to: "icons"},
             {from: "./src/serviceworker.js", to: "serviceworker.js"},
         ],
     }),

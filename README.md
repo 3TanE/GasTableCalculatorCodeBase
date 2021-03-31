@@ -1,20 +1,24 @@
 # TheClockTwister's Webpack Template
 
 ## Project Structure
+The following file tree will show you what configs you have at your
+disposal and what configurations they contain:
 ```
 /src
-|- index.html           HTML template
-|- index.js             Entrypoint (loads index.sass)
-|- index.sass           Global styles
+|- serviceworker.js     Serviceworker configuration (tune variables)
+|- theme.js             MaterialUI themes for dark/light mode
 |
-|- App.js               Main application (e.g. dom-rotuer)
-|- App.sass             Main application styles
+|- /public
+|  |- index.html        HTML template (edit page title etc.)
+|  |- manifest.json     Application information (must-have for PWA support)
+|  |- favicon.ico       Tab icon (needs to be .ico format)
 |
-|- styles               Styles folder
-   |- colors.sass       Global color definitions
+|- /App
+|  |- App.js            Main application (build your application here)
+|  |- Loading.js        Loading screen (displayed while app loads in background)
 
 /webpack
-|- config.js            Main webpack configuraiton
+|- config.js            Main webpack configuraiton (easy configuration)
 |- presets              (don't touch unless you know what you're doing)
    |- base              Webpack base config (shared among dev|stage|prod)
    |- dev.babel.js      Development configuration (npm start)
