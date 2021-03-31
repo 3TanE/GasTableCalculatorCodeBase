@@ -3,7 +3,8 @@ import React, {useEffect, useState} from "react";
 import {createStore} from "redux";
 import {Provider, useSelector} from "react-redux";
 import {useCookies} from "react-cookie";
-import {CssBaseline, ThemeProvider} from '@material-ui/core'
+import {CssBaseline} from '@material-ui/core'
+import {ThemeProvider} from '@material-ui/core/styles'
 
 import {darkTheme, lightTheme} from "./theme";
 

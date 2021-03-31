@@ -1,7 +1,8 @@
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import React from "react";
 import {useDispatch} from "react-redux";
-import {Button, makeStyles} from '@material-ui/core'
+import {Button} from '@material-ui/core'
+import {makeStyles} from "@material-ui/core/styles";
 import {InvertColorsOffOutlined} from '@material-ui/icons'
 
 const useStyles = makeStyles((theme) => ({
