@@ -112,10 +112,10 @@ const GasTableCalculator = () => {
             <div className={"resultContainer"}>
                 {calcListResults[0] ? <SubSonicResultList data={calcListResults[0]}/> : null}
             </div>
-            <div>
+            <div className={"resultContainer"}>
                 {calcListResults[1] ? <SuperSonicResultList data={calcListResults[1]}/> : null}
             </div>
-            <div>
+            <div className={"resultContainer"}>
                 {calcListResults[2] ? <VSWResultList data={calcListResults[2]}/> : null}
             </div>
 

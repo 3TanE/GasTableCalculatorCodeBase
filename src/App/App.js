@@ -1,6 +1,7 @@
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import React from "react";
 import GasTableCalculator from "./GasTableCalculator";
+import "./GasTableCalculator.scss"
 
 
 
