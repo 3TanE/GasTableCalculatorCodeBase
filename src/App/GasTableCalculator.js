@@ -21,8 +21,6 @@ const GasTableCalculator = () => {
 
         let newState = {};
         newState[id] = origin;
-        console.log(newState)
-        console.log(!config[id].sanityCheck(origin))
         if (!config[id].sanityCheck(origin)) {
             setInputState({...newState})
             return;
@@ -39,17 +37,16 @@ const GasTableCalculator = () => {
     const transferResults = () => {
         let keys = Object.keys(inputState)
         if (keys.length > 0) {
-            if (calcListResults[tableType] === undefined) {
-                calcListResults[tableType] = [];
+            if(keys.every((key)=>(inputFieldsConf[tableType][key].sanityCheck(inputState[key])))){
+              if (calcListResults[tableType] === undefined) {
+                  calcListResults[tableType] = [];
+                }
+                let temp = [...calcListResults[tableType]]
+                temp.push({id: calcListResults[tableType].length, ...inputState});
+                calcListResults[tableType] = temp;
+                setInputState({});
             }
-            let temp = [...calcListResults[tableType]]
-            temp.push({id: calcListResults[tableType].length, ...inputState});
-            calcListResults[tableType] = temp;
-            setInputState({});
-
         }
-
-
     }
     const getInputFields = () => {
         let config = inputFieldsConf[tableType]
@@ -57,7 +54,7 @@ const GasTableCalculator = () => {
         return keys.map(key => {
                 let field = config[key]
                 let saintValue = field.sanityCheck(inputState[field.id] || "")
-                console.log(saintValue, inputState[field.id])
+          //      console.log(saintValue, inputState[field.id])
                 return (
                     <TextField
                         disabled={field.disabled || false}
@@ -92,6 +89,7 @@ const GasTableCalculator = () => {
                         id="demo-simple-select-placeholder-label"
                         value={tableType}
                         onChange={(event) => {
+                            setInputState({});
                             setTableType(event.target.value)
                         }}
                         displayEmpty
@@ -112,10 +110,10 @@ const GasTableCalculator = () => {
             <div className={"resultContainer"}>
                 {calcListResults[0] ? <SubSonicResultList data={calcListResults[0]}/> : null}
             </div>
-            <div className={"resultContainer"}>
+            <div className={"resultContainer follow"}>
                 {calcListResults[1] ? <SuperSonicResultList data={calcListResults[1]}/> : null}
             </div>
-            <div className={"resultContainer"}>
+            <div className={"resultContainer follow"}>
                 {calcListResults[2] ? <VSWResultList data={calcListResults[2]}/> : null}
             </div>
 
