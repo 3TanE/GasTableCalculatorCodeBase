@@ -11,6 +11,7 @@ const pluginsProd = [
     new Visualizer({filename: './statistics.html'})
 ]
 
+
 baseConfig.stats = {children: false}                                // more
 baseConfig.mode = 'production'                                      // serve mode
 baseConfig.plugins.join(pluginsProd)                                // add production plugins

@@ -33,7 +33,7 @@ const About = () => (
         Herny Page of Fh-Aachen who motivated me to make this App
         <div />
         by providing outstanding documentation
-        for the practical assignments during the stay at home order in Corona
+        for the practical assignments during the stay at home order through out the pandemic
       </div>
       <div className="specialThanks">
         NASA for making this great background image
