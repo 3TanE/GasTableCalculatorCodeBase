@@ -13,7 +13,7 @@ const mapConfigToColumns = (config) => {
   const keys = Object.keys(config);
   return keys.map((key) => ({
     field: config[key].id,
-    headerName: <InlineMath>{config[key].label}</InlineMath>,
+    headerName: <InlineMath style={{ width: '2em' }}>{config[key].label}</InlineMath>,
     width: config[key].width,
   }));
 };
