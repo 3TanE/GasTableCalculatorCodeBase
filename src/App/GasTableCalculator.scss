@@ -18,11 +18,7 @@ body{
    padding-top: 4vh;
  }
 
-  .title{
-    font-size: 3rem;
-    font-family: "Bodoni MT Poster Compressed";
-    padding-top: 4rem;
-  }
+
   .MuiFormLabel-root{
     font-size: 1.2rem;
   }
@@ -57,4 +53,35 @@ padding-top: 1vh;
 .buttons{
   padding-top: 4vh;
 }
+}
+.title{
+    font-size: 3rem;
+    font-family: "Bodoni MT Poster Compressed";
+    padding-top: 4rem;
+  }
+.About{
+  text-align: center;
+  font-size: 1.1em;
+}
+.aboutText{
+  width:50%;
+  margin:auto;
+  padding-top: 2rem;
+}
+.specialThanks{
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.spacer{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.about-link{
+  position: absolute;
+  top:1rem;
+  right:4rem;
+  font-size: 1.3rem;
+}
+.thanksTitle{
+  font-size: 1.3rem;
 }

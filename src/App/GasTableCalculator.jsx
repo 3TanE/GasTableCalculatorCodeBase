@@ -6,6 +6,7 @@ import {
 import 'katex/dist/katex.min.css';
 import { InlineMath } from 'react-katex';
 import { DataGrid } from '@material-ui/data-grid';
+import { NavLink } from 'react-router-dom';
 import inputFieldsConf from './inputFieldsConf';
 
 const mapConfigToColumns = (config) => {
@@ -88,6 +89,7 @@ const GasTableCalculator = () => {
 
   return (
     <div className="gasTableCalculator">
+      <NavLink to="/about" className="about-link">About</NavLink>
       <div className="title">Gas Table Calculator</div>
       <div className="tableSelector">
         <FormControl>
