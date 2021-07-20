@@ -1,0 +1,87 @@
+
+body{
+  background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/f4_p4_plane_drop_v.jpg") !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed!important;
+  height: fit-content!important;
+  overflow-x: hidden;
+}
+
+
+.gasTableCalculator{
+
+  height:fit-content;
+  min-height: 100vh;
+  width: 100vw;
+  text-align: center;
+ .tableSelector{
+   padding-top: 4vh;
+ }
+
+
+  .MuiFormLabel-root{
+    font-size: 1.2rem;
+  }
+  .MuiOutlinedInput-input{
+    padding-top: 2rem;
+  }
+  .resultContainer{
+    width:80%;
+    margin:auto;
+
+  }
+  .follow{
+    padding-top: 10vh;
+  }
+
+
+.MuiDataGrid-root{
+  background-color: #00000073;
+}
+.inputs{
+  background-color: #00000073;
+  height:fit-content;
+  max-width: 80%;
+  margin:auto;
+  margin-top: 4vh;
+padding-top: 1vh;
+  .MuiFormControl-root {
+  margin:0.28em;
+  height: 12vh;
+}
+}
+.buttons{
+  padding-top: 4vh;
+}
+}
+.title{
+    font-size: 3rem;
+    font-family: "Bodoni MT Poster Compressed";
+    padding-top: 4rem;
+  }
+.About{
+  text-align: center;
+  font-size: 1.1em;
+}
+.aboutText{
+  width:50%;
+  margin:auto;
+  padding-top: 2rem;
+}
+.specialThanks{
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.spacer{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.about-link{
+  position: absolute;
+  top:1rem;
+  right:4rem;
+  font-size: 1.3rem;
+}
+.thanksTitle{
+  font-size: 1.3rem;
+}

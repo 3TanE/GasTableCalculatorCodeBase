@@ -1,0 +1,11 @@
+{
+    "env": {
+        "browser": true
+    },
+   "extends": ["airbnb", "airbnb/hooks"],
+    "rules": {
+
+        "eqeqeq": "warn",
+        "strict": "off"
+    }
+}
